@@ -1,0 +1,42 @@
+<%- include('partials/header.ejs', { locals }) %>
+
+<main>
+    
+
+    <div class="box">
+        <% if (locals.array) { %>
+        <% for( let i = 0; i < array.length; i++ ) { %>
+        <div class="item">
+            <input type="checkbox" id="myCheckbox" value="hello">
+            <label for="myCheckbox" class="strikethrough"><%= array[i] %></label>
+        </div>
+
+        <% } %>
+        <% } %>
+
+        <% if (locals.today) { %>
+        <div class="item">
+            <form action="/" method="post">
+                <!-- <label for="name">Enter new task for today : </label> -->
+                <input type="text" id="name" name="name" placeholder="today's task" required>
+                <button class="plus-button" type="submit">+</button>
+            </form>
+        </div>
+        <% } %>
+
+        <% if (locals.work) { %>
+        <div class="item">
+            <form action="/work" method="post">
+                <!-- <label for="name">Enter new work task : </label> -->
+                <input type="text" id="name" name="name" placeholder="work-task" required>
+                <button class="plus-button" type="submit">+</button>
+            </form>
+        </div>
+        <% } %>
+
+    </div>
+</main>
+</body>
+<%- include('partials/footer.ejs', { locals }) %>
+
+</html>

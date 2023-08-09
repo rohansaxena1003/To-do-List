@@ -1,0 +1,92 @@
+body {
+    background-color: #3eed1930;
+    text-align: center;
+    margin: 0;
+    font-family: "helvetica neue"
+}
+
+.navbar-box {
+    display: flex;
+}
+
+.navbar-box>* {
+    display: flex;
+    height: 50px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+}
+
+a {
+    text-decoration: none;
+    /* Remove underline */
+    outline: none;
+    /* Remove highlighting on click */
+}
+
+li {
+    list-style: none;
+}
+
+input[type=checkbox]:checked+label.strikethrough {
+    text-decoration: line-through;
+    color: #c14e1d;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f1f1f1;
+    gap: 30px;
+    min-height: 70px;
+    font-size: 1rem;
+}
+
+h1 {
+    color: #fff;
+    padding: 10px;
+    background-color: #49bf42e3;
+}
+
+.box {
+    max-width: 400px;
+    margin: 50px auto;
+    background: #f7f5f5;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    text-align: center;
+}
+
+.plus-button {
+    width: 50px;
+    height: 50px;
+    background-color: #5edea2;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 36px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.plus-button:hover {
+    background-color: #1dc14b;
+}
+
+.item>form>input {
+    width: 333px;
+    height: 60px;
+    border: none;;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #f7f5f5;
+}
+
+input::placeholder {
+    color: rgb(191, 190, 190);
+}
